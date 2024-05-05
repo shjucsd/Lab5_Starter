@@ -15,7 +15,7 @@ import {
 
 //test1
 test('checks correctly if correct phone number', () => {
-  expect(isPhoneNumber('655-555-0100')).toBe(false);
+  expect(isPhoneNumber('655-555-0100')).toBe(true);
 });
 
 //test2
