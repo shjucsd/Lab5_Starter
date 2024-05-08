@@ -66,25 +66,25 @@ test('checks correctly if incorrect email', () => {
 //test cases for true
 
 //test1
-test('checks correctly if strong password', () => {
+test('checks correctly if correct password', () => {
   expect(isStrongPassword('Abcd_1234fgh')).toBe(true);
 });
 
 //test2
-test('checks correctly if strong password', () => {
+test('checks correctly if correct password', () => {
   expect(isStrongPassword('j1bd4f92nd8sn')).toBe(true);
 });
 
 //test cases for false
 
 //test1
-test('checks correctly if not strong password', () => {
+test('checks correctly if incorrect password', () => {
   expect(isStrongPassword('dfe$_000')).toBe(false);
 });
 
 //test2
-test('checks correctly if not strong password', () => {
-  expect(isStrongPassword('abcabc')).toBe(false);
+test('checks correctly if incorrect password', () => {
+  expect(isStrongPassword('--abcabcabcabcabcabcabc')).toBe(false);
 });
 
 //Tests for isDate
@@ -124,7 +124,7 @@ test('checks correctly if correct hex', () => {
 
 //test2
 test('checks correctly if correct hex', () => {
-  expect(isHexColor('6c')).toBe(true);
+  expect(isHexColor('6ca')).toBe(true);
 });
 
 //test cases for false
