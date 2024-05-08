@@ -19,6 +19,9 @@ test('checks correctly if correct phone number', () => {
 });
 
 //test2
+test('checks correctly if correct phone number', () => {
+  expect(isPhoneNumber('925-872-4820')).toBe(true);
+});
 
 //test cases for false
 
@@ -28,6 +31,9 @@ test('checks correctly if incorrect phone number', () => {
 });
 
 //test2
+test('checks correctly if incorrect phone number', () => {
+  expect(isPhoneNumber('chicken')).toBe(false);
+});
 
 //Tests for isEmail
 
@@ -39,6 +45,9 @@ test('checks correctly if correct email', () => {
 });
 
 //test2
+test('checks correctly if correct email', () => {
+  expect(isEmail('fetang@gmail.com')).toBe(true);
+});
 
 //test cases for false
 
@@ -48,26 +57,35 @@ test('checks correctly if incorrect email', () => {
 });
 
 //test2
+test('checks correctly if incorrect email', () => {
+  expect(isEmail('www.google.com')).toBe(false);
+});
 
 //Tests for isStrongPassword
 
 //test cases for true
 
 //test1
-test('checks correctly if correct password', () => {
+test('checks correctly if strong password', () => {
   expect(isStrongPassword('Abcd_1234fgh')).toBe(true);
 });
 
 //test2
+test('checks correctly if strong password', () => {
+  expect(isStrongPassword('j1bd4f92nd8sn')).toBe(true);
+});
 
 //test cases for false
 
 //test1
-test('checks correctly if incorrect password', () => {
+test('checks correctly if not strong password', () => {
   expect(isStrongPassword('dfe$_000')).toBe(false);
 });
 
 //test2
+test('checks correctly if not strong password', () => {
+  expect(isStrongPassword('abcabc')).toBe(false);
+});
 
 //Tests for isDate
 
@@ -79,6 +97,9 @@ test('checks correctly if correct date', () => {
 });
 
 //test2
+test('checks correctly if correct date', () => {
+  expect(isDate('05/07/2024')).toBe(true);
+});
 
 //test cases for false
 
@@ -88,6 +109,9 @@ test('checks correctly if incorrect date', () => {
 });
 
 //test2
+test('checks correctly if incorrect date', () => {
+  expect(isDate('228899999')).toBe(false);
+});
 
 //Tests for isHexColor
 
@@ -99,6 +123,9 @@ test('checks correctly if correct hex', () => {
 });
 
 //test2
+test('checks correctly if correct hex', () => {
+  expect(isHexColor('6c')).toBe(true);
+});
 
 //test cases for false
 
@@ -108,4 +135,6 @@ test('checks correctly if incorrect hex', () => {
 });
 
 //test2
-
+test('checks correctly if incorrect hex', () => {
+  expect(isHexColor('3zst')).toBe(false);
+});
